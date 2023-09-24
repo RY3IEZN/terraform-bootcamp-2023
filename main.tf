@@ -9,9 +9,9 @@ resource "random_string" "bucket_name" {
 # create the terauckets
 resource "aws_s3_bucket" "towntera_buckets" {
   bucket = random_string.bucket_name.result
+
+  tags = {
+    name = var.tagname
+  }
 }
 
-# create output to see name
-output "randomly_gen_name" {
-  value = random_string.bucket_name.id
-}
