@@ -3,4 +3,3 @@ variable "tagname" {
   description = "(optional) describe your variable"
   default     = "teratownbucket"
 }
-

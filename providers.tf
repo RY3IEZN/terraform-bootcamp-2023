@@ -16,3 +16,4 @@ provider "aws" {
   access_key = "denied"
   secret_key = "revoked lol"
 }
+
