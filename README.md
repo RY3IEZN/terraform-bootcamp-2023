@@ -1,6 +1,8 @@
 <!-- @format -->
 
-# Terraform Beginner Bootcamp 2023
+# Terraform Bootcamp 2023
+
+![](/images/tera_town.png)
 
 ## Semantic Versioning 2.0.0 :mage:
 
