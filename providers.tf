@@ -15,6 +15,6 @@ provider "aws" {
   region     = ""
   access_key = ""
   secret_key = ""
-  delete_me  = ""
+  secret_key = ""
 }
 
