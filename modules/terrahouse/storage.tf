@@ -37,6 +37,11 @@ resource "aws_s3_object" "index_html_object" {
   content_type = "text/html"
 
   etag = filemd5("${path.root}/public/index.html")
+
+  lifecycle {
+    replace_triggered_by = [terraform_data.content_version]
+    ignore_changes       = [etag]
+  }
 }
 
 # create error.html object inside bucket
@@ -72,3 +77,9 @@ resource "aws_s3_bucket_policy" "terratown_bucket_policy" {
     }
   })
 }
+
+# create a sample resource that we can use to manage the state of a version number
+resource "terraform_data" "content_version" {
+  input = var.content_version
+}
+

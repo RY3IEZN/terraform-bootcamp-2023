@@ -1,5 +1,11 @@
 variable "tagname" {
   type        = string
-  description = "(optional) describe your variable"
+  description = "tag"
   default     = "teratownbucket"
+}
+
+variable "content_version" {
+  type        = number
+  description = "content version"
+  default     = 2
 }
