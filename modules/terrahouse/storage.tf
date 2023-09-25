@@ -39,7 +39,7 @@ resource "aws_s3_object" "index_html_object" {
   etag = filemd5("${path.root}/public/index.html")
 
   lifecycle {
-    replace_triggered_by = [terraform_data.content_version]
+    replace_triggered_by = [terraform_data.content_version.output]
     ignore_changes       = [etag]
   }
 }

@@ -12,8 +12,8 @@ terraform {
 }
 
 provider "aws" {
-  region     = "eu-west-2"
-  access_key = ""
-  secret_key = ""
+  region     = "if you send me the location"
+  access_key = "denied"
+  secret_key = "revoked lol"
 }
 

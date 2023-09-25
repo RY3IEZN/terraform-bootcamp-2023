@@ -58,3 +58,20 @@ resource "aws_cloudfront_origin_access_control" "default" {
   signing_behavior                  = "always"
   signing_protocol                  = "sigv4"
 }
+
+
+# create a sample resource that we can use to manage the state of a version number
+resource "terraform_data" "invalidate_cache" {
+  triggers_replace = terraform_data.content_version.output
+
+  provisioner "local-exec" {
+    interpreter = ["powershell.exe", "-Command"]
+
+    command = <<EOT
+aws cloudfront create-invalidation --distribution-id ${aws_cloudfront_distribution.s3_distribution.id} --path "/*"
+    EOT
+
+
+  }
+}
+
