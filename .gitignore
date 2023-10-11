@@ -30,8 +30,9 @@ override.tf.json
 # example: *tfplan*
 
 # Ignore CLI configuration files
-.terraformrc
 terraform.rc
 
 /home/ubuntu/terraform-bootcamp-2023/terraform-provider-terratownsz/terraform-provider-terratownsz_v*
 terraform-provider-terratownsz_v*
+
+terraform-provider-terratowns_v1.0.0

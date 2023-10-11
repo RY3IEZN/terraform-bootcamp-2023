@@ -1,4 +1,4 @@
-module github.com/RY3IEZN/terraform-provider-terratownz
+module github.com/RY3IEZN/terraform-provider-terratowns
 
 go 1.18
 

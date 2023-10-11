@@ -6,7 +6,7 @@ cd /home/ubuntu/terraform-bootcamp-2023/terraform-provider-terratownsz
 
 
 echo "copy the terraformrc to .terraformrc "
-cp /home/ubuntu/terraform-bootcamp-2023/terraformrc /home/ubuntu/terraform-bootcamp-2023/.terraformrc
+cp /home/ubuntu/.terraformrc /home/ubuntu/terraform-bootcamp-2023/.terraformrc
 
 echo "if already exist delete"
 rm -rf /home/ubuntu/.terraform.d/plugins
@@ -14,12 +14,12 @@ rm -rf /home/ubuntu/terraform-bootcamp-2023/.terraform
 rm -rf /home/ubuntu/terraform-bootcamp-2023/.terraform.lock.hcl
 
 echo "go build binary"
-go build -o terraform-provider-terratownsz_v1.0.0
+go build -o terraform-provider-terratowns_v1.0.0
 
 echo "creating the directory"
-mkdir -p ~/.terraform.d/plugins/local.provider/local/terratownsz/1.0.0/x86_64
-mkdir -p ~/.terraform.d/plugins/local.provider/local/terratownsz/1.0.0/linux_amd64
+mkdir -p ~/.terraform.d/plugins/local.providers/local/terratowns/1.0.0/x86_64/
+mkdir -p ~/.terraform.d/plugins/local.providers/local/terratowns/1.0.0/linux_amd64/
 
 echo "copy binary to both file"
-cp terraform-provider-terratownsz_v1.0.0 ~/.terraform.d/plugins/local.provider/local/terratownsz/1.0.0/linux_amd64
-cp terraform-provider-terratownsz_v1.0.0 ~/.terraform.d/plugins/local.provider/local/terratownsz/1.0.0/x86_64
+cp terraform-provider-terratowns_v1.0.0 ~/.terraform.d/plugins/local.providers/local/terratowns/1.0.0/linux_amd64
+cp terraform-provider-terratowns_v1.0.0 ~/.terraform.d/plugins/local.providers/local/terratowns/1.0.0/x86_64
