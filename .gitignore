@@ -32,3 +32,6 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+/home/ubuntu/terraform-bootcamp-2023/terraform-provider-terratownsz/terraform-provider-terratownsz_v*
+terraform-provider-terratownsz_v*
